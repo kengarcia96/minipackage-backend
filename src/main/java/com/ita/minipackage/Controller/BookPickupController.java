@@ -21,6 +21,14 @@ public class BookPickupController {
         return bookPickupService.createBooking(bookPickup);
     }
 
+    @GetMapping(path="/{packageNumber}", produces={"application/json"})
+    @ResponseStatus(code = HttpStatus.OK)
+    public BookPickup getSpecificPackageNumber(@PathVariable Integer packageNumber) {
+        return bookPickupService.getSpecificPackage(packageNumber);
+    }
+
+
+
 
 
 }

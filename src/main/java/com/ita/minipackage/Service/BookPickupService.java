@@ -14,4 +14,8 @@ public class BookPickupService {
     public BookPickup createBooking(BookPickup bookPickup) {
             return bookPickupRepository.save(bookPickup);
     }
+
+    public BookPickup getSpecificPackage(Integer packageNumber) {
+        return bookPickupRepository.findbyPackageNumber(packageNumber);
+    }
 }
